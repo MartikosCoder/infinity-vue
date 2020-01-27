@@ -27,12 +27,17 @@
 </template>
 
 <script>
+/**
+   * @vue-prop {Object} user - Specific user to show
+   * @vue-event {String} fullName - Creates full name from pieces
+   */
 export default {
   name: "UserCard",
   props: {
     user: {
       type: Object,
-      default: null
+      default: null,
+      required: true
     }
   },
   methods: {

@@ -10,6 +10,12 @@
 
 <script>
 import UserCard from './components/UserCard.vue';
+/**
+   * @vue-data {Boolean} [uploading=false] - Indicates upload status (to prevent multiple uploads per scroll)
+   * @vue-data {Array} [users=[]] - Array of users to render
+   * @vue-event handleScroll - Controls scroll logic
+   * @vue-event {Number} loadNewUsers - Gets new users from API, based on amount (given as parameter)
+   */
 export default {
   name: "CardTable",
   components: {
@@ -22,14 +28,14 @@ export default {
     };
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
-    this.loadNewUsers(10);
+    window.addEventListener('scroll', this.handleScroll); // Binding scroll handler to window
+    this.loadNewUsers(10); // Initial load
   },
   methods: {
     handleScroll() {
-      const position = window.scrollY + window.innerHeight;
-      const bottom = document.body.scrollHeight;
-      const offset = 500;
+      const position = window.scrollY + window.innerHeight; // Current position of scroll
+      const bottom = document.body.scrollHeight; // Bottom of the page
+      const offset = 500; // Offset ( for smooth refresh process )
       if(position >= bottom - offset && !this.uploading) {
         this.loadNewUsers(15);
       }
