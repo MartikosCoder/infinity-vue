@@ -1,1 +1,1 @@
-# infinity-vue
+# Infinity scroll in Vue
