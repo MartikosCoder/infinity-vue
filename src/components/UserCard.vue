@@ -48,7 +48,7 @@ export default {
   margin: 1% auto;
 }
 
-.centered:last-child {
+.centered:first-child, .centered:last-child {
   margin-top: 0;
   margin-bottom: 0;
 }

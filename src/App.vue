@@ -54,3 +54,9 @@ export default {
   }
 };
 </script>
+<style>
+  body {
+    background: #e9fffc;
+    padding: 1% 0;
+  }
+</style>
