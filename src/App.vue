@@ -52,7 +52,7 @@ export default {
     handleScroll() {
       const position = window.scrollY + window.innerHeight;
       const bottom = document.body.scrollHeight;
-      const offset = 400;
+      const offset = 500;
       if(position >= bottom - offset && !this.uploading) {
         this.loadNewUsers(15);
       }
