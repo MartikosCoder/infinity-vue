@@ -5,3 +5,4 @@ new Vue({
 	el: '#app',
 	render: r => r(App)
 });
+
