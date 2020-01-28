@@ -61,9 +61,9 @@ export default {
 };
 </script>
 <style>
-  body {
-    min-height: 100vh;
-    background: #e9fffc;
-    padding: 1% 0;
-  }
+body {
+  min-height: 100vh;
+  background: #e9fffc;
+  padding: 1% 0;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <vk-card class="uk-width-1-2 centered">
+  <vk-card class="uk-width-1-2@m uk-width-1-1@s centered">
     <div slot="header">
       <vk-grid 
         gutter="small" 
@@ -56,5 +56,19 @@ export default {
 .centered:first-child, .centered:last-child {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .centered {
+    margin: 5% auto;
+  }
+
+  .uk-card-title {
+    font-size: 14px;
+  }
+
+  .uk-text-meta {
+    font-size: 12px;
+  }
 }
 </style>
