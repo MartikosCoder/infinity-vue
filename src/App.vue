@@ -55,6 +55,9 @@ export default {
         })
         .catch(err => {
           console.log(err);
+          setTimeout(() => {
+            this.loadNewUsers(15);
+          }, 2000);
         });
     }
   }
